@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- <h1>Welcome to the World</h1>
+    <input type="text" id="campaign"><br><br>
+    <input type="button" id="btnCampaign" value="open"><br><br>
+    <input type="button" id="btnClose" value="close"> -->
+    <!-- <textarea id="textSerial" rows="12" cols="30"></textarea><br><br> -->
+    <select id="selCountry" size="10" style="width:200px">
+    </select><br><br>
+    <input type="button" id="btnFill" value="채우기">&nbsp;&nbsp;&nbsp;
+    <input type="button" id="'btnGet" value="가져오기">
+    
+</body>
+<script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+<script>
+    $(document)
+    .on('click','#btnFill',function(){
+        arCountry=['Korea','USA','Finland','Sweden','Norway','Singapore'];
+        for(i=0;i<arCountry.length;i++){
+            let str=`<option>${arCountry[i]}</option>`
+            $('#selCountry').append(str);
+        }
+        // let country='Korea';
+        // let str=`<option>${country}</option>`;
+        //$('#selCountry').append(str);
+        return false;
+
+        //textarea에 일련번호 채우기
+        // x=''+1+'\n';
+        // x=x+2+'\n';
+        // x=x+3+'\n';
+        // x=x+10+'\n';
+
+        // x='';
+        // for(i=1;i<=10;i++){
+        //     x=x+i+'\n';
+        // }
+        // $('textSerial').val(x);
+        // return false;
+    })
+//     let wid=null;
+//     $(document)
+//     .ready(function(){
+//         //웹페이지 로드 직후 실행될 코드들(초기화)
+//         alert('just after load');
+//         return false;
+//     })
+// .on('click','#btnCampaign',function(){
+//     // wid=window.open('http://www.amazon.com','','width=200,height=300');
+//     $('#campaign').val('Hello Cheonan.');
+//     return false;
+// })
+// .on('click','#btnClose',function(){
+//     // if(wid!=null) wid.close();
+//     //$('#campaign').val('Goodbye Cheonan.');
+//     alert($('#campaign').val());
+//     return false;
+//})
+
+</script>
+</html>

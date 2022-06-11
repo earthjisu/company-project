@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    table{
+        border-collapse: collapse;
+        }
+    td{
+        width:50px;height:30px; text-align: center;border:1px solid blue;
+    }
+</style>
+    
+<body>
+        <table id="tbl">
+            <tr>
+                <td></td><td></td><td></td><td></td><td></td>
+            </tr>
+            <tr>
+                <td></td><td></td><td></td><td></td><td></td>
+            </tr>
+            <tr>
+                <td></td><td></td><td></td><td></td><td></td>
+            </tr>
+            <tr>
+                <td></td><td></td><td></td><td></td><td></td>
+            </tr>
+            <tr>
+                <td></td><td></td><td></td><td></td><td></td>
+            </tr>
+        </table>
+        <br>
+        <button id="btnFill">Fill Data</button>
+        <button id="btnHide">Hide</button>
+        <button id="btnShow">Show</button>
+</body>
+<script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+<script>
+$(document)
+.on('click','#btnFill',function(){
+    let x=1;
+    i=0; j=0;
+    flag='East';
+    for(x=1;x<26;x++){
+        if(flag=='East'){
+            $(`#tbl tr:eq(${i}) td:eq(${j})`).text(x);
+            j++;
+            if(j==$('#tbl tr:eq(0) td').length-1){
+            
+            }
+        }
+
+        // for(j=0;j<$('#tbl tr:eq(0) td').length;j++){
+        //     if($(`#tbl tr:eq(${i}) td:eq(${j})`).text()==''){
+        //     let str=`#tbl tr:eq(${i}) td:eq(${j})`;
+        //     $(str).text(x++);
+        //     }
+
+        // }
+     
+    }
+
+})
+// $(document)
+//     .on('click','#btnFill',function(){ 
+//         let x=1;
+//         for(i=0; i<$('#tbl tr').length; i++){
+//             if(i%2==1) {  //홀수인덱스 tr
+//                 for(j=$('#tbl tr:eq(0) td').length-1;j>=0;j--){
+//                     let str=`#tbl tr:eq(${i}) td:eq(${j})`;
+//                     $(str).text(x);
+//                     x++;
+//                 }
+//             } else{   //짝수인덱스 tr
+//                 for(j=0;j<$('#tbl tr:eq(0) td').length;j++){
+//                     let str=`#tbl tr:eq(${i}) td:eq(${j})`;
+//                     $(str).text(x);
+//                     x++;
+//                 }
+//             }
+//         }
+//     })
+</script>
+
+    
+</html>

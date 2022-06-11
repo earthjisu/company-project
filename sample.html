@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sample</title>
+</head>
+<body>
+    <input type=text id="mobile" name="mobile"><br>
+    <input type=text id='myname' name='myname'><br>
+    <label id="lblAddress">1234</label><br>
+    <textarea id=postcode></textarea><br><br>
+    <input type="button" id="btnPut" name="btnPut" value="모바일번호 넣기">
+</body>
+<script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+<script>
+$(document)
+.on('click','#btnPut',function(){
+    $('#mobile').val('77778888');
+    $('#myname').val('박재형');
+    $('#lblAddress').text('천안시 서북구');
+    $('#postcode').val('31312');
+    return false;
+})
+
+</script>
+</html>
